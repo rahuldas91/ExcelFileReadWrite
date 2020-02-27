@@ -1,7 +1,5 @@
 package com.seleniumwizard.app;
 
-import java.io.File;
-
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
@@ -18,8 +16,8 @@ public class Application {
 			 
 	        File file = new File(classLoader.getResource(fileName).getFile());*/
 			
-			Connection connection=fillo.getConnection("D:\\PublicGit\\ExcelFileReadWrite\\excel-readWrite\\src\\main\\resources\\Students.xlsx");
-			//String strQuery="Select * from Students where Height=189 and First_Name='David'";
+			Connection connection=fillo.getConnection("E:\\Work\\Workspaces\\STS4\\SeleniumWizard\\ExcelFileReadWrite\\excel-readWrite\\src\\main\\resources\\Students.xlsx");
+			//String strQuery="Select * from Students where First_Name='tem47026'";
 			String strQuery="Select * from Students";
 			Recordset recordset=connection.executeQuery(strQuery);
 
