@@ -3,6 +3,7 @@ package com.seleniumwizard.app;
 import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
+import com.seleniumwizard.query.constants.FilloQueries;
 
 public class Application {
 
@@ -18,7 +19,7 @@ public class Application {
 			
 			Connection connection=fillo.getConnection("E:\\Work\\Workspaces\\STS4\\SeleniumWizard\\ExcelFileReadWrite\\excel-readWrite\\src\\main\\resources\\Students.xlsx");
 			//String strQuery="Select * from Students where First_Name='tem47026'";
-			String strQuery="Select * from Students";
+			String strQuery=FilloQueries.SELECT_ALL+" "+FilloQueries.TBL_STUDENTS;
 			Recordset recordset=connection.executeQuery(strQuery);
 
 			while(recordset.next()){
