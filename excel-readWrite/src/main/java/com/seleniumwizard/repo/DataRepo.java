@@ -1,6 +1,6 @@
 package com.seleniumwizard.repo;
 
-public interface FilloDataRepo {
+public interface DataRepo {
 	
 	public String getData(String key);
 }

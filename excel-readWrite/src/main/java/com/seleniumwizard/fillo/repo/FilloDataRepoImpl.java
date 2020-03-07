@@ -1,14 +1,14 @@
 package com.seleniumwizard.fillo.repo;
 
-import com.seleniumwizard.repo.FilloDataRepo;
-import com.seleniumwizard.repo.RepoMapFillo;
+import com.seleniumwizard.repo.DataRepo;
+import com.seleniumwizard.repo.RepoMap;
 
-public class FilloDataRepoImpl implements FilloDataRepo{
+public class FilloDataRepoImpl implements DataRepo{
 
 	@Override
 	public String getData(String key) {
 		
-		return RepoMapFillo.filloRepo.get(key).toString();
+		return RepoMap.filloRepo.get(key).toString();
 	}
 
 }
