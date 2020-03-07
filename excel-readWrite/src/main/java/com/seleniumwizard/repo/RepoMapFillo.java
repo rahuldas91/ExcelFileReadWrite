@@ -1,4 +1,4 @@
-package com.seleniumwizard.fillo.repoMap;
+package com.seleniumwizard.repo;
 
 import java.util.HashMap;
 

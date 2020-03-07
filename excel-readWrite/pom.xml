@@ -10,8 +10,8 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<fillo-version>1.21</fillo-version>
+		<poi-version>4.1.2</poi-version>
 	</properties>
-
 
 	<dependencies>
 		<dependency>
@@ -19,5 +19,12 @@
 			<artifactId>fillo</artifactId>
 			<version>${fillo-version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi-version}</version>
+		</dependency>
+
 	</dependencies>
 </project>

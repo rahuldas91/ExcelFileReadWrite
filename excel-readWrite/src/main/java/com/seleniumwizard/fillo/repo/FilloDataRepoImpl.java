@@ -1,6 +1,7 @@
 package com.seleniumwizard.fillo.repo;
 
-import com.seleniumwizard.fillo.repoMap.RepoMapFillo;
+import com.seleniumwizard.repo.FilloDataRepo;
+import com.seleniumwizard.repo.RepoMapFillo;
 
 public class FilloDataRepoImpl implements FilloDataRepo{
 

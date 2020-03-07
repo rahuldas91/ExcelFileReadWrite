@@ -4,6 +4,7 @@ import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 import com.seleniumwizard.fillo.queryConstants.FilloQueries;
+import com.seleniumwizard.repo.RepoMapFillo;
 
 public class RepoMapFillImpl implements RepoMapFillo {
 

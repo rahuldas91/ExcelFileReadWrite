@@ -1,4 +1,4 @@
-package com.seleniumwizard.fillo.repo;
+package com.seleniumwizard.repo;
 
 public interface FilloDataRepo {
 	

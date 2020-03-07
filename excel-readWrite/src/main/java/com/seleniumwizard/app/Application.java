@@ -1,10 +1,15 @@
-package com.seleniumwizard.fillo.app;
+package com.seleniumwizard.app;
 
 import com.seleniumwizard.fillo.repo.FilloDataRepoImpl;
 import com.seleniumwizard.fillo.repoMap.RepoMapFillImpl;
 
 public class Application {
 
+	
+	/***
+	 * Example with Fillo
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		try {
