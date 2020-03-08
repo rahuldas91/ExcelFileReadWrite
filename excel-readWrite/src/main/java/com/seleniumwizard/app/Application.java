@@ -1,5 +1,6 @@
 package com.seleniumwizard.app;
 
+import com.seleniumwizard.poi.repo.POIDataRepoImpl;
 import com.seleniumwizard.poi.repoMap.RepoMapPoiImpl;
 
 public class Application {
@@ -29,9 +30,10 @@ public class Application {
 
 		try {
 			RepoMapPoiImpl rmpi = new RepoMapPoiImpl();
+			POIDataRepoImpl pdri = new POIDataRepoImpl();
 			rmpi.createRepository();
 
-			//System.err.println(obj.getData("Key_9"));
+			System.err.println(pdri.getData("Key_9"));
 		} catch (Exception e) {
 			System.err.println(e.getMessage() + " ----> " + e.getCause());
 		}

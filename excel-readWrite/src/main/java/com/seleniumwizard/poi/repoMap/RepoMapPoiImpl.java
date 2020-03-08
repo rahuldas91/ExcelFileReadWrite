@@ -35,38 +35,18 @@ public class RepoMapPoiImpl implements RepoMap {
 				myWorkbook = new HSSFWorkbook(inputStream);
 
 			}
-			
-			
-			//Read sheet inside the workbook by its name
 
-		    Sheet guru99Sheet = myWorkbook.getSheet(FilloQueries.TBL_TEST_DATA);
+			Sheet guru99Sheet = myWorkbook.getSheet(FilloQueries.TBL_TEST_DATA);
 
-		    //Find number of rows in excel file
+			int rowCount = guru99Sheet.getLastRowNum() - guru99Sheet.getFirstRowNum();
 
-		    int rowCount = guru99Sheet.getLastRowNum()-guru99Sheet.getFirstRowNum();
+			for (int i = 1; i < rowCount + 1; i++) {
 
-		    //Create a loop over all the rows of excel file to read it
+				Row row = guru99Sheet.getRow(i);
 
-		    for (int i = 0; i < rowCount+1; i++) {
+				filloRepo.put(row.getCell(0).getStringCellValue(), row.getCell(1).getStringCellValue());
 
-		        Row row = guru99Sheet.getRow(i);
-
-		        //Create a loop to print cell values in a row
-
-		        for (int j = 0; j < row.getLastCellNum(); j++) {
-
-		            //Print Excel data in console
-
-		            System.out.print(row.getCell(j).getStringCellValue()+"|| ");
-
-		        }
-
-		        System.out.println();
-		    } 
-			
-			
-			
-			
+			}
 
 		} catch (Exception e) {
 			// TODO: handle exception
