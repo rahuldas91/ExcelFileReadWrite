@@ -15,9 +15,9 @@ import com.seleniumwizard.repo.RepoMap;
 public class RepoMapPoiImpl implements RepoMap {
 
 	@Override
-	public void createRepository() {
-		String filePath = "E:\\Work\\Workspaces\\STS4\\SeleniumWizard\\ExcelFileReadWrite\\excel-readWrite\\src\\main\\resources\\Students.xlsx";
-		File file = new File(filePath);
+	public void createRepository(String fileLocation) {
+
+		File file = new File(fileLocation);
 		try {
 
 			FileInputStream inputStream = new FileInputStream(file);

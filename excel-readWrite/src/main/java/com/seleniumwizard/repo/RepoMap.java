@@ -6,6 +6,6 @@ public interface RepoMap {
 	
 	public static HashMap<String, Object> filloRepo = new HashMap<String, Object>();
 	
-	public void createRepository();
+	public void createRepository(String fileLocation);
 
 }

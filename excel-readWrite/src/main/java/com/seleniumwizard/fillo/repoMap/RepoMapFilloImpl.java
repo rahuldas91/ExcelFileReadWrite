@@ -8,25 +8,22 @@ import com.seleniumwizard.repo.RepoMap;
 
 public class RepoMapFilloImpl implements RepoMap {
 
-	
-	
 	@Override
-	public void createRepository() {
+	public void createRepository(String fileLocation) {
 		try {
 
 			Fillo fillo = new Fillo();
-			
 
-			Connection connection = fillo.getConnection(
-					"E:\\Work\\Workspaces\\STS4\\SeleniumWizard\\ExcelFileReadWrite\\excel-readWrite\\src\\main\\resources\\Students.xlsx");
-	
+			Connection connection = fillo.getConnection(fileLocation);
+
 			String strQuery = FilloQueries.SELECT_ALL + " " + FilloQueries.TBL_TEST_DATA;
 			Recordset recordset = connection.executeQuery(strQuery);
 
-			while(recordset.next()){
+			while (recordset.next()) {
 				filloRepo.put(recordset.getField("Key"), recordset.getField("Data"));
-				//System.out.println("Key = "+recordset.getField("Key")+", Data = "+recordset.getField("Data"));
-				}
+				// System.out.println("Key = "+recordset.getField("Key")+", Data =
+				// "+recordset.getField("Data"));
+			}
 
 			recordset.close();
 			connection.close();
