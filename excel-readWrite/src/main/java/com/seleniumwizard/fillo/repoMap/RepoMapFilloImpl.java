@@ -21,8 +21,6 @@ public class RepoMapFilloImpl implements RepoMap {
 
 			while (recordset.next()) {
 				filloRepo.put(recordset.getField("Key"), recordset.getField("Data"));
-				// System.out.println("Key = "+recordset.getField("Key")+", Data =
-				// "+recordset.getField("Data"));
 			}
 
 			recordset.close();
