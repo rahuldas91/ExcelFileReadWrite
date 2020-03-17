@@ -54,7 +54,7 @@ public class POIExcelReadDirectImpl {
 			StringBuilder builder = new StringBuilder();
 			for (int i = 1; i < rowCount + 1; i++) {
 
-				for (int j = 0; j < sheet.getLastRowNum(); j++) {
+				for (int j = 0; j < sheet.getRow(i).getLastCellNum(); j++) {
 
 					builder.append("  |  ");
 					builder.append(formatter
